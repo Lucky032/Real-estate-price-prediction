@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telangana Real Estate Price Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="card">
+        <h2>🏠 Telangana Real Estate Price Prediction</h2>
+        <p class="subtitle">Get an estimated property price instantly</p>
+
+        <form method="POST">
+
+            <label>Year</label>
+            <input type="number" name="year" min="2020" max="2030" required>
+
+            <label>Area</label>
+            <select name="area" required>
+                <option value="">Select Area</option>
+                {% for area in areas %}
+                    <option value="{{ area }}">{{ area }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Property Type</label>
+            <select name="property_type" required>
+                <option value="">Select Property Type</option>
+                {% for ptype in property_types %}
+                    <option value="{{ ptype }}">{{ ptype }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Size (Sq Ft)</label>
+            <input type="number" name="size" min="300" required>
+
+            <button type="submit">Predict Price</button>
+        </form>
+
+        {% if price %}
+            <div class="result">
+                Estimated Price<br>
+                <span>₹ {{ price }}</span>
+            </div>
+        {% endif %}
+
+        {% if warning %}
+            <div class="warning">⚠ {{ warning }}</div>
+        {% endif %}
+
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>
