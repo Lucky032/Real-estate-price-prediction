@@ -1,7 +1,7 @@
 # 🏠 Telangana Real Estate Price Prediction System
 
 A real-time machine learning web application that predicts property prices in Telangana based on historical data from 2020–2025.
-![Real Estate Price Prediction App](./static/images/ss.jpeg)
+![Real Estate Price Prediction App](./static/images/Hyderabad.jpeg)
 
 ---
 
