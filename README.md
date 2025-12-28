@@ -1,7 +1,7 @@
 # 🏠 Telangana Real Estate Price Prediction System
 
 A real-time machine learning web application that predicts property prices in Telangana based on historical data from 2020–2025.
-![Real Estate Price Prediction App](./static/images/Hyderabad.jpeg)
+![Real Estate Price Prediction App](./static/images/Baghyanagaram.jpeg)
 
 ---
 
@@ -22,7 +22,8 @@ The trained model is deployed using Flask to provide instant price predictions t
 - **Problem Type:** Regression
 - **Algorithm Used:** Random Forest Regressor
 - **Evaluation Metric:** R² Score
-- **Final R² Score:** ~0.82
+- **Final R² Score:** ~0.85
+
 - **Target Transformation:** Log-transformed price for better accuracy
 
 ---

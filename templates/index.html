@@ -12,6 +12,12 @@
         <h2>🏠 Hyderabad Real Estate Price Prediction</h2>
 
         <p class="subtitle">Get an estimated property price instantly</p>
+        {% if accuracy %}
+        <div class="accuracy-badge">
+            🎯 Model Accuracy: {{ accuracy }}%
+        </div>
+        {% endif %}
+
 
         <form method="POST">
 

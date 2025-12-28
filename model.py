@@ -47,6 +47,11 @@ model.fit(X_train, y_train)
 pred = model.predict(X_test)
 r2 = r2_score(y_test, pred)
 print("Improved Model R2 Score:", r2)
+accuracy_percent = round(r2 * 100, 1)
+
+with open("model_accuracy.txt", "w") as f:
+    f.write(str(accuracy_percent))
+
 
 # Save model and encoders
 pickle.dump(model, open("real_estate_model.pkl", "wb"))
